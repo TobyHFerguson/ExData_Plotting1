@@ -1,0 +1,5 @@
+source("load_power_data.R")
+data <- load_power_data()
+png(filename="plot1.png")
+hist(data$Global_active_power, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)", ylab="Frequency")
+dev.off()
