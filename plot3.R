@@ -1,5 +1,8 @@
 source("load_power_data.R")
 feb <- load_power_data()
+png(filename="plot3.png")
 with(feb, plot(x=DateTime,y=Sub_metering_1, type="l", ylab="Energy sub metering", xlab="",col="black"))
 with(feb, lines(x=DateTime,y=Sub_metering_2, col="red"))
 with(feb, lines(x=DateTime,y=Sub_metering_3, col="blue"))
+legend(x="topright", y=NULL, fill=c("black", "red", "blue"), c("Sub_metering_1","Sub_metering_2","Sub_metering_3" ))
+dev.off()
