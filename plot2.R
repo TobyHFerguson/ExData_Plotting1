@@ -1,5 +1,5 @@
 source("load_power_data.R")
 feb <- load_power_data()
-#png(filename="plot2.png")
+png(filename="plot2.png")
 with(feb, plot(x=DateTime, y=Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)"))
-#dev.off()
+dev.off()
