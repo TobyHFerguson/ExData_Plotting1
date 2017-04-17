@@ -1,0 +1,5 @@
+source("load_power_data.R")
+feb <- load_power_data()
+with(feb, plot(x=DateTime,y=Sub_metering_1, type="l", ylab="Energy sub metering", xlab="",col="black"))
+with(feb, lines(x=DateTime,y=Sub_metering_2, col="red"))
+with(feb, lines(x=DateTime,y=Sub_metering_3, col="blue"))
